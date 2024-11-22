@@ -36,7 +36,7 @@ const PrivacyPolicy = () => {
             employees of Doaguru School Jabalpur, managing this information for
             purposes of contacting you or sending you emails based on your
             request for information. We use location of the device so that
-            whenever an employee of Daoguru School Jabalpur marks attendance
+            whenever an employee of Doaguru School Jabalpur marks attendance
             from the mobile app, school will get to know whether the attendance
             was marked from an allowed premises. We are storing Android Unique
             ID along with other login information to keep record that what all

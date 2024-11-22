@@ -15,7 +15,7 @@ function Footer() {
   const postalCode = "02139,";
   const state = "United States";
   const emailAddress =
-    "doaguruschool@gmail.com";
+    "Doaguruschool@gmail.com";
   const contact1 = "9996655444";
   const contact2 = "1235243132";
   const contact3 = "5545588";
@@ -54,7 +54,7 @@ function Footer() {
                 <img src="" alt="" />
                 <a
                   className="btn btn-floating m-1 px-md-2"
-                  href="https://www.youtube.com/@doaguru.infosystems"
+                  href="https://www.youtube.com/@Doaguru.infosystems"
                   role="button">
                   <i class="bi bi-youtube icon text-danger"></i>
                 </a>
@@ -66,14 +66,14 @@ function Footer() {
                 </a>
                 <a
                   className="btn btn-floating m-1 px-md-2"
-                  href="https://www.instagram.com/doaguruinfosystems/?hl=en"
+                  href="https://www.instagram.com/Doaguruinfosystems/?hl=en"
                   role="button">
                   <i className="bi bi-instagram icon insta text" style={{ color: '#cd486b' }}></i>
 
                 </a>
                 <a
                   className="btn btn-floating m-1 px-md-2"
-                  href="https://www.linkedin.com/company/doaguru-info-sys/"
+                  href="https://www.linkedin.com/company/Doaguru-info-sys/"
                   role="button">
                   <i class="bi bi-linkedin icon text-primary"></i>
                 </a>

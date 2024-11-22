@@ -93,7 +93,7 @@ const OurSchool = () => {
           <div className="col-md-12 d-flex flex-column justify-content-center align-items-center">
             <div className="d-flex justify-content-center align-items-center text-center">
               <h1 className="tophead align-items-center">
-                MAIN PRIORITIES AT DOAGURU SCHOOL
+                MAIN PRIORITIES AT Doaguru SCHOOL
               </h1>
             </div>
             <div className="">
@@ -108,7 +108,7 @@ const OurSchool = () => {
       <div className="row mt-5">
         <div className="col-lg-12 d-flex justify-content-center align-items-center">
           <h2 className="mdhead text-center">
-          "Explore Doaguru School: Where Learning and Joy Connect."
+          "Explore Doaguru School: Where Learning and Doaguru Connect."
           </h2>
         </div>
       </div>
@@ -116,7 +116,7 @@ const OurSchool = () => {
       <div className="container mt-5">
         <div className="row m-2">
           <div className="col-lg-6 col-md-12 ">
-            <img src={excellence} alt="jsss" className="academic img-fluid img1" data-aos="zoom-in" />
+            <img src={excellence} className="academic img-fluid img1" data-aos="zoom-in" />
           </div>
           <div className="col-lg-6 col-md-12">
             <div className="text-start" data-aos="fade-left">

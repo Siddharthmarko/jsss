@@ -25,8 +25,8 @@ const Copy = () => {
               <div className="row">
                 <div className="col-lg-6 col-sm-12 mt-3 d-flex justify-content-center align-items-center">
                   <p>
-                    &copy; 2023 DOAGURU SCHOOL . DEVELOPED BY
-                    DOAGURU INFOSYSTEMS
+                    &copy; 2023 Doaguru SCHOOL . DEVELOPED BY
+                    Doaguru INFOSYSTEMS
                   </p>
                 </div>
 

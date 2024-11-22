@@ -1,8 +1,6 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import { Carousel } from "react-bootstrap";
 import { IoIosArrowForward } from "react-icons/io";
@@ -21,37 +19,40 @@ function Our_Achievement() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [cardData, setCardData] = useState([]);
+  const [cardData, setCardData] = useState([
+    {
+      id: 1,
+      title: "Excellence in Science",
+      year: 2024,
+      cardImageUrl: "https://via.placeholder.com/300",
+      description: "Awarded for outstanding performance in Science in 2024.",
+    },
+    {
+      id: 2,
+      title: "Best Sports Team",
+      year: 2023,
+      cardImageUrl: "https://via.placeholder.com/300",
+      description: "Recognized as the best sports team in 2023.",
+    },
+    {
+      id: 3,
+      title: "Cultural Fest Winner",
+      year: 2022,
+      cardImageUrl: "https://via.placeholder.com/300",
+      description: "Awarded for winning the annual cultural festival in 2022.",
+    },
+    // Add more dummy data here as needed
+  ]);
 
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(
-        // `https://www.joyseniorsecondary.ac.in/api/auth/getawards`
-      );
-      console.log(response.data);
-      setCardData(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const [imgData, setImgData] = useState([]);
-
-  const handleModal = async (id) => {
-    try {
-      const res = await axios.get(
-        // `https://www.joyseniorsecondary.ac.in/api/auth/awardAchivBulkImagesId/${id}`
-      );
-      console.log(res.data.images);
-      setImgData(res.data.images);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [imgData, setImgData] = useState([
+    {
+      bulkimages: "https://via.placeholder.com/800x400",
+    },
+    {
+      bulkimages: "https://via.placeholder.com/800x400",
+    },
+    // Add more dummy image data here as needed
+  ]);
 
   const filteredCards = cardData
     .filter((card) =>
@@ -60,12 +61,14 @@ function Our_Achievement() {
     .filter((card) =>
       filterYear ? card.year && card.year.toString() === filterYear : true
     );
+
   const uniqueYears = [...new Set(cardData.map((card) => card.year))];
+
   return (
     <Wrapper>
       <div className="container mt-5">
         <h1 className="text-center" style={{ color: "#7d38c6" }}>
-          Our achievements
+          Our Achievements
         </h1>
         <div
           className="underline mx-auto"
@@ -79,8 +82,8 @@ function Our_Achievement() {
         ></div>
       </div>
 
-      <div className="container mb-5 mt-5 ">
-        <div className="d-flex justify-content-center ">
+      <div className="container mb-5 mt-5">
+        <div className="d-flex justify-content-center">
           <select
             className="form-select mx-2"
             aria-label="Default select example"
@@ -98,7 +101,7 @@ function Our_Achievement() {
           <input
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="form-control me-2 "
+            className="form-control me-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
@@ -118,7 +121,6 @@ function Our_Achievement() {
 
                 <div className="card-body">
                   <h5 className="card-title mt-2">{card.title}</h5>
-                  {/* <p className="card-text">{card.description}</p> */}
                   {card.title && (
                     <Button
                       variant="primary"
@@ -131,73 +133,16 @@ function Our_Achievement() {
                   <button
                     type="button"
                     className="btn4"
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
-                    onClick={() => handleModal(card.id)}
+                    onClick={() => handleShow()}
                   >
                     <IoIosArrowForward size={30} />
                   </button>
-
-                  <div
-                    className="modal fade"
-                    id="staticBackdrop"
-                    data-bs-backdrop="static"
-                    data-bs-keyboard="false"
-                    tabindex="-1"
-                    aria-labelledby="staticBackdropLabel"
-                    aria-hidden="true"
-                  >
-                    <div className="modal-dialog modal-dialog-centered">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h5 className="modal-title" id="staticBackdropLabel">
-                            Award Achievement Modal
-                          </h5>
-                          <button
-                            type="button"
-                            className="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div className="modal-body">
-                          <Carousel>
-                            {imgData.map((item) => (
-                              <Carousel.Item>
-                                <div className="d-flex justify-content-center align-items-center flex-column">
-                                  <img
-                                    className="d-block w-100"
-                                    src={item.bulkimages}
-                                    alt="event images"
-                                  />
-                                  {/* <button className="btn btn-danger" onClick={()=>deleteImages(item.id)}>
-                                    Delete
-                                  </button> */}
-                                </div>
-                              </Carousel.Item>
-                            ))}
-                          </Carousel>
-                        </div>
-                        {/* <div className="modal-footer">
-                          <button
-                            type="button"
-                            className="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                          <button type="button" className="btn btn-primary">
-                            Understood
-                          </button>
-                        </div> */}
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
         <Modal
           show={show}
           onHide={handleClose}
@@ -214,23 +159,57 @@ function Our_Achievement() {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body style={{ backgroundColor: "#4d4dff", color: "white" }}>
-            {selectedCard ? selectedCard.descp : "Default Description"}
+            {selectedCard ? selectedCard.description : "Default Description"}
           </Modal.Body>
-          {/* <Modal.Footer  style={{backgroundColor:"#4d4dff"}}>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
-              </Button>
-            </Modal.Footer> */}
         </Modal>
+
+        <div
+          className="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="staticBackdropLabel">
+                  Award Achievement Modal
+                </h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body">
+                <Carousel>
+                  {imgData.map((item, index) => (
+                    <Carousel.Item key={index}>
+                      <div className="d-flex justify-content-center align-items-center flex-column">
+                        <img
+                          className="d-block w-100"
+                          src={item.bulkimages}
+                          alt="event images"
+                        />
+                      </div>
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </Wrapper>
   );
 }
 
 export default Our_Achievement;
+
 const Wrapper = styled.div`
   .card {
     width: 100%;

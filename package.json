@@ -1,5 +1,5 @@
 {
-  "name": "jsss_client",
+  "name": "Doaguru_client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +11,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
-    "axios": "^1.6.2",
     "bootstrap": "^5.3.2",
     "cogo-toast": "^4.2.3",
     "jquery": "^3.7.1",

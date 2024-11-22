@@ -9,11 +9,11 @@ const RefundPolicy = () => {
         <h2>Cancellation & Refund Policy</h2>
       </div>
       <p>
-        Joy Senior Secondary School Jabalpur believes in helping its customers
+        Doaguru Secondary School Jabalpur believes in helping its customers
         as far as possible and has, therefore, a liberal cancellation policy.
         Under this policy: Fee Cancellations will not be considered if payment
         is done. However, the cancellation request will not be entertained if
-        the orders have been not communicated to Joy Senior Secondary School
+        the orders have been not communicated to Doaguru Secondary School
         Jabalpur. If any transaction failed while payment then bank will refund
         the amount within 8-10 days. In case you feel that the form received is
         not as shown on the site or as per your expectations, you must bring it

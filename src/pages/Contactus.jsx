@@ -37,7 +37,7 @@ const Contactus = () => {
                             </div>
                             <div className='line d-flex m-2 mt-4'>
                                 <MdEmail className='icon mt-2 fs-4' />
-                                <p className='para mx-3 '><span className='fw-bold'> Email : </span>doaguruschool@gmail.com</p>
+                                <p className='para mx-3 '><span className='fw-bold'> Email : </span>Doaguruschool@gmail.com</p>
                             </div>
 
 

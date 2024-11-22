@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import Header from "../../Layout/Header";
 import Header2 from "../../Layout/Header2";
-import axios from "axios";
 import ImageModal from "./ImageModal";
 import Footer from "../../Layout/Footer";
 import Copy from "../../Layout/Copy";
@@ -11,7 +9,27 @@ import Copy from "../../Layout/Copy";
 const Media_Corner = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterYear, setFilterYear] = useState(null);
-  const [cardData, setCardData] = useState([]);
+  const [cardData, setCardData] = useState([
+    {
+      id: 1,
+      title: "Science Fair 2024",
+      year: 2024,
+      cardimg: "https://via.placeholder.com/400",
+    },
+    {
+      id: 2,
+      title: "Sports Day Highlights 2023",
+      year: 2023,
+      cardimg: "https://via.placeholder.com/400",
+    },
+    {
+      id: 3,
+      title: "Cultural Festival 2022",
+      year: 2022,
+      cardimg: "https://via.placeholder.com/400",
+    },
+    // Add more dummy data here as needed
+  ]);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (imageUrl) => {
@@ -21,22 +39,6 @@ const Media_Corner = () => {
   const handleCloseModal = () => {
     setSelectedImage(null);
   };
-
-  const fetchingData = async () => {
-    try {
-      const response = await axios.get(
-        // `https://www.joyseniorsecondary.ac.in/api/auth/getmediacorner`
-      );
-      console.log(response.data.mediaCornerData);
-      setCardData(response.data.mediaCornerData);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchingData();
-  }, []);
 
   const filteredCards = cardData
     .filter((card) =>
@@ -58,14 +60,15 @@ const Media_Corner = () => {
           <div className="card" id="card1">
             <div className="front text-center mt-4">
               <h1 style={{ color: "#f1cf31" }}>
-              Visual Highlights: A Journey Through Doaguru
+                Visual Highlights: A Journey Through Doaguru
               </h1>
             </div>
             <div className="back text-center text-white mb-5">
               <h5>
-              "Discover our school's story through 'Visual Highlights' 
-              Dive into a visual voyage of cherished memories, dynamic events, 
-              and enriching learning experiences, all vividly captured in stunning images.
+                "Discover our school's story through 'Visual Highlights' Dive
+                into a visual voyage of cherished memories, dynamic events, and
+                enriching learning experiences, all vividly captured in stunning
+                images."
               </h5>
             </div>
           </div>
@@ -131,6 +134,7 @@ const Media_Corner = () => {
 };
 
 export default Media_Corner;
+
 const Wrapper = styled.div`
   .card {
     width: 100%;
@@ -179,5 +183,4 @@ const Wrapper = styled.div`
     transform: rotateX(180deg);
     margin-top: -2.5rem;
   }
-
 `;

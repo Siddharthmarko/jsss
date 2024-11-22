@@ -4,7 +4,6 @@ import Unifom from "../../images/doaguruuniform.png";
 import Header from "../../Layout/Header";
 import Header2 from "../../Layout/Header2";
 import Footer from "../../Layout/Footer";
-// import Pdf from "../../all imgs/latest jsss uniform.pdf";
 
 const Uniform = () => {
   return (

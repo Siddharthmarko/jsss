@@ -5,7 +5,6 @@ import Header from "../../Layout/Header";
 import Header2 from "../../Layout/Header2";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import axios from "axios";
 import { IoIosArrowForward } from "react-icons/io";
 import { Carousel } from "react-bootstrap";
 import Footer from "../../Layout/Footer";
@@ -25,36 +24,43 @@ const Photo_Gallery = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [cardData, setCardData] = useState([]);
-
-  const fetchData = async () => {
-    try {
-      const res = await axios.get(
-        `https://www.joyseniorsecondary.ac.in/api/auth/getphotoglly`
-      );
-      console.log(res.data);
-      setCardData(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // Dummy data for cardData
+  const cardData = [
+    {
+      id: 1,
+      title: "Annual Event 2024",
+      year: 2024,
+      cardImageUrl: "https://via.placeholder.com/300",
+      descp: "Event description goes here.",
+    },
+    {
+      id: 2,
+      title: "Sports Day 2023",
+      year: 2023,
+      cardImageUrl: "https://via.placeholder.com/300",
+      descp: "Sports day event highlights.",
+    },
+    {
+      id: 3,
+      title: "Science Fair 2022",
+      year: 2022,
+      cardImageUrl: "https://via.placeholder.com/300",
+      descp: "Students showcased innovative projects.",
+    },
+    // Add more items here as needed
+  ];
 
   const [imgData, setImgData] = useState([]);
 
-  const handleModal = async (id) => {
-    try {
-      const res = await axios.get(
-        `https://www.joyseniorsecondary.ac.in/api/auth/photoBulkImagesId/${id}`
-      );
-      console.log(res.data.images);
-      setImgData(res.data.images);
-    } catch (error) {
-      console.log(error);
-    }
+  // Dummy data for imgData (Images in the carousel)
+  const handleModal = (id) => {
+    // Simulate getting data based on the id
+    const images = [
+      { bulkimages: "https://via.placeholder.com/600" },
+      { bulkimages: "https://via.placeholder.com/600" },
+      { bulkimages: "https://via.placeholder.com/600" },
+    ];
+    setImgData(images);
   };
 
   const filteredCards = cardData
@@ -64,6 +70,7 @@ const Photo_Gallery = () => {
     .filter((card) =>
       filterYear ? card.year && card.year.toString() === filterYear : true
     );
+
   const uniqueYears = [...new Set(cardData.map((card) => card.year))];
 
   return (
@@ -113,7 +120,6 @@ const Photo_Gallery = () => {
 
                   <div className="card-body">
                     <h5 className="card-title mt-2">{card.title}</h5>
-                    {/* <p className="card-text">{card.descp}</p> */}
                     {card.title && (
                       <Button
                         variant="primary"
@@ -160,34 +166,19 @@ const Photo_Gallery = () => {
                           </div>
                           <div className="modal-body">
                             <Carousel>
-                              {imgData.map((item) => (
-                                <Carousel.Item>
+                              {imgData.map((item, index) => (
+                                <Carousel.Item key={index}>
                                   <div className="d-flex justify-content-center align-items-center flex-column">
                                     <img
                                       className="d-block w-100"
                                       src={item.bulkimages}
                                       alt="event images"
                                     />
-                                    {/* <button className="btn btn-danger" onClick={()=>deleteImages(item.id)}>
-                                    Delete
-                                  </button> */}
                                   </div>
                                 </Carousel.Item>
                               ))}
                             </Carousel>
                           </div>
-                          {/* <div className="modal-footer">
-                            <button
-                              type="button"
-                              className="btn btn-secondary"
-                              data-bs-dismiss="modal"
-                            >
-                              Close
-                            </button>
-                            <button type="button" className="btn btn-primary">
-                              Understood
-                            </button>
-                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -214,15 +205,7 @@ const Photo_Gallery = () => {
             <Modal.Body style={{ backgroundColor: "#4d4dff", color: "white" }}>
               {selectedCard ? selectedCard.descp : "Default Description"}
             </Modal.Body>
-            {/* <Modal.Footer  style={{backgroundColor:"#4d4dff"}}>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
-              </Button>
-            </Modal.Footer> */}
-          </Modal> 
+          </Modal>
         </div>
       </Wrapper>
       <Footer />
@@ -232,6 +215,7 @@ const Photo_Gallery = () => {
 };
 
 export default Photo_Gallery;
+
 const Wrapper = styled.div`
   .card {
     width: 100%;

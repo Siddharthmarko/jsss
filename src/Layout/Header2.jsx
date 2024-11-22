@@ -46,7 +46,7 @@ function Header2(props) {
                 <img
                   src={logo}
                   className=""
-                  id="doagurulogo"
+                  id="Doagurulogo"
                   alt="DoaschoolLogo"></img>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Wrapper = styled.div`
   * {
     overflow: hidden;
   }
-  #doagurulogo {
+  #Doagurulogo {
     width: 200px;
   }
   .card-img-overlay {
@@ -94,7 +94,7 @@ const Wrapper = styled.div`
 
   /* Styles for screens up to 600px wide */
   @media screen and (max-width: 600px) {
-    #doagurulogo {
+    #Doagurulogo {
       width: 45px;
       
     }
@@ -160,7 +160,7 @@ const Wrapper = styled.div`
 
   /* Styles for screens between 601px and 1200px wide */
   @media screen and (min-width: 601px) and (max-width: 1200px) {
-    #doagurulogo {
+    #Doagurulogo {
       width: 300px;
     }
     .card-img-overlay {
@@ -172,7 +172,7 @@ const Wrapper = styled.div`
   
   /* Styles for screens above 1200px wide */
   @media screen and (min-width: 1201px) {
-    #doagurulogo {
+    #Doagurulogo {
       width: 400px;
     }
   }
@@ -182,7 +182,7 @@ const Wrapper = styled.div`
         font-size: 20px;
       }
    
-    #doagurulogo {
+    #Doagurulogo {
     width: 100px;
   }
   }

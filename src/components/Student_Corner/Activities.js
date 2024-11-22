@@ -5,7 +5,6 @@ import Header from "../../Layout/Header";
 import Header2 from "../../Layout/Header2";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import axios from "axios";
 import { IoIosArrowForward } from "react-icons/io";
 import { Carousel } from "react-bootstrap";
 import Footer from "../../Layout/Footer";
@@ -17,6 +16,48 @@ const Activities = () => {
   const [show, setShow] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
 
+  // Dummy Data for Activities
+  const cardData = [
+    {
+      id: 1,
+      title: "Sports Day",
+      cardimg: "https://via.placeholder.com/300",
+      year: 2023,
+      descp: "An exciting day of sports activities for all students.",
+    },
+    {
+      id: 2,
+      title: "Science Exhibition",
+      cardimg: "https://via.placeholder.com/300",
+      year: 2022,
+      descp: "A showcase of scientific models and projects.",
+    },
+    {
+      id: 3,
+      title: "Annual Day Celebration",
+      cardimg: "https://via.placeholder.com/300",
+      year: 2021,
+      descp: "A grand celebration with performances and speeches.",
+    },
+    // Add more dummy data as needed
+  ];
+
+  // Dummy Data for Images
+  const imgData = [
+    {
+      id: 1,
+      bulkimages: "https://via.placeholder.com/500",
+    },
+    {
+      id: 2,
+      bulkimages: "https://via.placeholder.com/500",
+    },
+    {
+      id: 3,
+      bulkimages: "https://via.placeholder.com/500",
+    },
+  ];
+
   const handleCardClick = (card) => {
     setSelectedCard(card);
     handleShow();
@@ -25,45 +66,11 @@ const Activities = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [cardData, setCardData] = useState([]);
-
-  const fetchData = async () => {
-    try {
-      const res = await axios.get(
-        `https://www.joyseniorsecondary.ac.in/api/auth/getactivity`
-      );
-      console.log(res.data);
-      setCardData(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const [imgData, setImgData] = useState([]);
-
-  const handleModal = async (id) => {
-    try {
-      const res = await axios.get(
-        `https://www.joyseniorsecondary.ac.in/api/auth/activityBulkImagesId/${id}`
-      );
-      console.log(res.data.images);
-      setImgData(res.data.images);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
+  // Filter activities by search term and year
   const filteredCards = cardData
-    .filter((card) =>
-      card.title.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    .filter((card) =>
-      filterYear ? card.year && card.year.toString() === filterYear : true
-    );
+    .filter((card) => card.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    .filter((card) => filterYear ? card.year && card.year.toString() === filterYear : true);
+
   const uniqueYears = [...new Set(cardData.map((card) => card.year))];
 
   return (
@@ -111,12 +118,8 @@ const Activities = () => {
 
                   <div className="card-body">
                     <h5 className="card-title mt-2">{card.title}</h5>
-                    {/* <p className="card-text">{card.descp}</p> */}
                     {card.title && (
-                      <Button
-                        variant="primary"
-                        onClick={() => handleCardClick(card)}
-                      >
+                      <Button variant="primary" onClick={() => handleCardClick(card)}>
                         Read More
                       </Button>
                     )}
@@ -126,27 +129,25 @@ const Activities = () => {
                       className="btn4"
                       data-bs-toggle="modal"
                       data-bs-target="#staticBackdrop"
-                      onClick={() => handleModal(card.id)}
+                      onClick={() => handleShow()}
                     >
                       <IoIosArrowForward size={30} />
                     </button>
 
+                    {/* Modal for images */}
                     <div
                       className="modal fade"
                       id="staticBackdrop"
                       data-bs-backdrop="static"
                       data-bs-keyboard="false"
-                      tabindex="-1"
+                      tabIndex="-1"
                       aria-labelledby="staticBackdropLabel"
                       aria-hidden="true"
                     >
                       <div className="modal-dialog modal-dialog-centered">
                         <div className="modal-content">
                           <div className="modal-header">
-                            <h5
-                              className="modal-title"
-                              id="staticBackdropLabel"
-                            >
+                            <h5 className="modal-title" id="staticBackdropLabel">
                               Activities Modal
                             </h5>
                             <button
@@ -159,33 +160,18 @@ const Activities = () => {
                           <div className="modal-body">
                             <Carousel>
                               {imgData.map((item) => (
-                                <Carousel.Item>
+                                <Carousel.Item key={item.id}>
                                   <div className="d-flex justify-content-center align-items-center flex-column">
                                     <img
                                       className="d-block w-100"
                                       src={item.bulkimages}
                                       alt="event images"
                                     />
-                                    {/* <button className="btn btn-danger" onClick={()=>deleteImages(item.id)}>
-                                    Delete
-                                  </button> */}
                                   </div>
                                 </Carousel.Item>
                               ))}
                             </Carousel>
                           </div>
-                          {/* <div className="modal-footer">
-                            <button
-                              type="button"
-                              className="btn btn-secondary"
-                              data-bs-dismiss="modal"
-                            >
-                              Close
-                            </button>
-                            <button type="button" className="btn btn-primary">
-                              Understood
-                            </button>
-                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -195,6 +181,7 @@ const Activities = () => {
             ))}
           </div>
 
+          {/* Modal for activity details */}
           <Modal
             show={show}
             onHide={handleClose}
@@ -216,6 +203,7 @@ const Activities = () => {
           </Modal>
         </div>
       </Wrapper>
+
       <Footer />
       <Copy />
     </>
@@ -223,6 +211,7 @@ const Activities = () => {
 };
 
 export default Activities;
+
 const Wrapper = styled.div`
   .card {
     width: 100%;
@@ -232,27 +221,33 @@ const Wrapper = styled.div`
       height: 100%;
     }
   }
+
   .form-control {
     width: 25%;
-
     @media screen and (max-width: 768px) {
       width: 100%;
     }
   }
+
   .form-select {
     width: 10%;
-
     @media screen and (max-width: 768px) {
       width: 100%;
     }
   }
 
   .btn4 {
-    margin-left: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     padding: 0.5rem;
     border-radius: 50%;
     color: white;
     background-color: #929fba;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
   }
 `;
+

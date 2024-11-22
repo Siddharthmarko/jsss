@@ -30,26 +30,6 @@ function Extra_Curricular() {
     
           videoUrl: "https://www.youtube.com/embed/XxSes4YSYHU?si=maaKPTk-er2yX_MQ&amp;controls=0&amp;start=17",
         },
-        // {
-        //   id: 4,
-        //   title: "Rai Dance 2009",
-        //   description:
-        //     "In 2009 Indira Gandhi Rashtriya Manav Vikas Sangralaya -Bhopal invited the Balrang winning team of Joy Senior. The event was Yuva Sadbhavna Sammellan and the team performed in the presence of H.E. Governor of M.P. Mr. Rameshwar Thakur.",
-          
-            
-        //   videoUrl: "https://www.youtube.com/embed/R6ZRJd4xjXA?si=cRYMobDguv-xFwCJ",
-        // },
-        // {
-        //   id: 5,
-        //   title: "Balrang 2008 in school campus",
-        //   description:
-        //     "In 2008 Balrang National Competition-The credit of bringing the traditional Rai Dance in an artistic manner on the stage goes to Joy Senior Secondary School Jabalpur. Joy secured the first position in the Dance Competition at National Level by defeating 15 teams from all over India.",
-        //     year: 2013,
-    
-        //   videoUrl: "https://www.youtube.com/embed/RXOCXB3DKlU",
-        // },
-       
-        // Add more card objects as needed
       ];
   return (
     <>
