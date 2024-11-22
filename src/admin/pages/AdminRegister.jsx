@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import Swal from "sweetalert2";
-import logo from "../../admin/images/cropped-unnamed-1.png";
+import logo from "../../admin/images/DGlogo.png";
 import { Link } from "react-router-dom";
 import RouterMain from "./RouterMain";
 

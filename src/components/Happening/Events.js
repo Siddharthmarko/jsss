@@ -5,14 +5,7 @@ import Header from "../../Layout/Header";
 import Header2 from "../../Layout/Header2";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Event1 from "../../videos/Event1.mp4";
-import Event2 from "../../videos/Event2.mp4";
-import Event3 from "../../videos/Event3.mp4";
-import Event4 from "../../videos/Event4.mp4";
-import Event5 from "../../videos/Event5.mp4";
-import Event6 from "../../videos/Event6.mp4";
-import Event7 from "../../videos/Event7.mp4";
-import Event8 from "../../videos/Event8.mp4";
+
 import Footer from "../../Layout/Footer";
 import Copy from "../../Layout/Copy";
 
@@ -60,6 +53,7 @@ const Events = () => {
       model_desc:
         "'A Tribute to Our Legend' through the first of its kind 'The Mega 3-D Mapping Show'",
     },
+   
     {
       id: 3,
       title: "Tribute to God Kataragama Lord Ganesha | Sparkling Doaguru Kids 2023",
@@ -67,7 +61,7 @@ const Events = () => {
         "'Fantastic Performance by Class-3rd 'Lord Ganesha'",
       year: 2023,
 
-      videoUrl: 'https://www.youtube.com/embed/iN-fmC6V0ME?si=4TsApMMIikAOwut5&amp;controls=0&amp;start=17',
+      videoUrl: 'https://www.youtube.com/watch?v=jwQcLBf53Zw',
       model_title: "3-D Mapping Shown Video",
       model_desc:
         "'A Tribute to Our Legend' through the first of its kind 'The Mega 3-D Mapping Show'",

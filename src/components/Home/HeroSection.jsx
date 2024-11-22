@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import video from "../../all imgs/home/Doaguru school hero video.mp4"
+// import video from "../../all imgs/home/Doaguru school hero video.mp4"
 import logo from "../../all imgs/home/DSlogo4.png"
 
 const HeroSection = () => {
@@ -38,7 +38,7 @@ const HeroSection = () => {
             </div>
             <div className="videosect w-100 h-100 overflow-hidden">
               <video
-                src={video}
+                src="https://videos.pexels.com/video-files/12724008/12724008-uhd_2732_1440_60fps.mp4"
                 autoPlay
                 muted
                 loop
