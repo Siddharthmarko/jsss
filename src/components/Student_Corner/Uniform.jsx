@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Unifom from "../../images/doaguruuniform.png";
 import Header from "../../Layout/Header";
 import Header2 from "../../Layout/Header2";
 import Footer from "../../Layout/Footer";
@@ -17,7 +16,7 @@ const Uniform = () => {
             <div className="col-1"></div>
             <div className="col-10 text-center">
               <img
-                src={Unifom}
+                src={"https://img.freepik.com/free-vector/hand-drawn-school-uniform-element-collection_23-2149907795.jpg?t=st=1732358546~exp=1732362146~hmac=f08b87c5baa0862b8a6250fe61e177948ffee837780f50d7e41ecb80cd77d800&w=1480"}
                 height={750}
                 width={1270}
                 alt="uniform"
