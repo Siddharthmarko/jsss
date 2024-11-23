@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Header from "../../Layout/Header";
@@ -24,44 +24,28 @@ const Photo_Gallery = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  // Dummy data for cardData
+  // Static data for cardData
   const cardData = [
     {
       id: 1,
-      title: "Annual Event 2024",
-      year: 2024,
-      cardImageUrl: "https://via.placeholder.com/300",
-      descp: "Event description goes here.",
+      title: "Event 1",
+      year: 2023,
+      cardImageUrl: "https://placeimg.com/300/200/tech",
     },
     {
       id: 2,
-      title: "Sports Day 2023",
-      year: 2023,
-      cardImageUrl: "https://via.placeholder.com/300",
-      descp: "Sports day event highlights.",
+      title: "Event 2",
+      year: 2022,
+      cardImageUrl: "https://placeimg.com/300/200/nature",
     },
     {
       id: 3,
-      title: "Science Fair 2022",
-      year: 2022,
-      cardImageUrl: "https://via.placeholder.com/300",
-      descp: "Students showcased innovative projects.",
+      title: "Event 3",
+      year: 2021,
+      cardImageUrl: "https://placeimg.com/300/200/people",
     },
-    // Add more items here as needed
+    // Add more event cards as needed
   ];
-
-  const [imgData, setImgData] = useState([]);
-
-  // Dummy data for imgData (Images in the carousel)
-  const handleModal = (id) => {
-    // Simulate getting data based on the id
-    const images = [
-      { bulkimages: "https://via.placeholder.com/600" },
-      { bulkimages: "https://via.placeholder.com/600" },
-      { bulkimages: "https://via.placeholder.com/600" },
-    ];
-    setImgData(images);
-  };
 
   const filteredCards = cardData
     .filter((card) =>
@@ -79,8 +63,8 @@ const Photo_Gallery = () => {
       <Header2 heading="Photo Gallery" />
 
       <Wrapper>
-        <div className="container mb-5 mt-5 ">
-          <div className="d-flex justify-content-center ">
+        <div className="container mb-5 mt-5">
+          <div className="d-flex justify-content-center">
             <select
               className="form-select mx-2"
               aria-label="Default select example"
@@ -102,7 +86,7 @@ const Photo_Gallery = () => {
             <input
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="form-control me-2 "
+              className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
@@ -138,7 +122,6 @@ const Photo_Gallery = () => {
                       className="btn4"
                       data-bs-toggle="modal"
                       data-bs-target="#staticBackdrop"
-                      onClick={() => handleModal(card.id)}
                     >
                       <IoIosArrowForward size={30} />
                     </button>
@@ -148,7 +131,7 @@ const Photo_Gallery = () => {
                       id="staticBackdrop"
                       data-bs-backdrop="static"
                       data-bs-keyboard="false"
-                      tabindex="-1"
+                      tabIndex="-1"
                       aria-labelledby="staticBackdropLabel"
                       aria-hidden="true"
                     >
@@ -170,17 +153,16 @@ const Photo_Gallery = () => {
                           </div>
                           <div className="modal-body">
                             <Carousel>
-                              {imgData.map((item, index) => (
-                                <Carousel.Item key={index}>
-                                  <div className="d-flex justify-content-center align-items-center flex-column">
-                                    <img
-                                      className="d-block w-100"
-                                      src={item.bulkimages}
-                                      alt="event images"
-                                    />
-                                  </div>
-                                </Carousel.Item>
-                              ))}
+                              {/* Use a static array for the modal images */}
+                              <Carousel.Item>
+                                <div className="d-flex justify-content-center align-items-center flex-column">
+                                  <img
+                                    className="d-block w-100"
+                                    src="https://placeimg.com/800/600/tech"
+                                    alt="event images"
+                                  />
+                                </div>
+                              </Carousel.Item>
                             </Carousel>
                           </div>
                         </div>
@@ -191,73 +173,54 @@ const Photo_Gallery = () => {
               </div>
             ))}
           </div>
-          <Modal
-            show={show}
-            onHide={handleClose}
-            size="lg"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-          >
-            <Modal.Header closeButton style={{ backgroundColor: "#4d4dff" }}>
-              <Modal.Title
-                id="contained-modal-title-vcenter"
-                style={{ color: "white", textAlign: "center" }}
-              >
-                {selectedCard ? selectedCard.title : "Default Title"}
-              </Modal.Title>
-            </Modal.Header>
-            <Modal.Body style={{ backgroundColor: "#4d4dff", color: "white" }}>
-              {selectedCard ? selectedCard.descp : "Default Description"}
-            </Modal.Body>
-          </Modal>
         </div>
 
         <div className="m-4">
-        {/* <!-- Gallery --> */}
-<div className="row">
-  <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
-    <img
-      src="https://media.istockphoto.com/id/1146902501/photo/school-children-jumping-and-celebrating-in-school-campus.jpg?s=612x612&w=0&k=20&c=rSETssGcQbFELUNmMAMNRSloiqMeB5noBfCIfgOkAVQ="
-      className="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
+          {/* Gallery */}
+          <div className="row">
+            <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
+              <img
+                src="https://media.istockphoto.com/id/1146902501/photo/school-children-jumping-and-celebrating-in-school-campus.jpg?s=612x612&w=0&k=20&c=rSETssGcQbFELUNmMAMNRSloiqMeB5noBfCIfgOkAVQ="
+                className="w-100 shadow-1-strong rounded mb-4"
+                alt="Event Image"
+              />
 
-    <img
-      src="https://images.pexels.com/photos/8441831/pexels-photo-8441831.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Wintry Mountain Landscape"
-    />
-  </div>
+              <img
+                src="https://images.pexels.com/photos/8441831/pexels-photo-8441831.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                className="w-100 shadow-1-strong rounded mb-4"
+                alt="Event Image"
+              />
+            </div>
 
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://images.pexels.com/photos/8926457/pexels-photo-8926457.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Mountains in the Clouds"
-    />
+            <div className="col-lg-4 mb-4 mb-lg-0">
+              <img
+                src="https://images.pexels.com/photos/8926457/pexels-photo-8926457.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                className="w-100 shadow-1-strong rounded mb-4"
+                alt="Event Image"
+              />
 
-    <img
-      src="https://media.istockphoto.com/id/1280864057/photo/girl-with-face-mask-back-at-school-after-covid-19-quarantine-and-lockdown-raising-hand.jpg?s=612x612&w=0&k=20&c=GCXWoPt0eo4qUtoPFyuzkCDObV7ymZm-CteKt1y94BA="
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Boat on Calm Water"
-    />
-  </div>
+              <img
+                src="https://media.istockphoto.com/id/1280864057/photo/girl-with-face-mask-back-at-school-after-covid-19-quarantine-and-lockdown-raising-hand.jpg?s=612x612&w=0&k=20&c=GCXWoPt0eo4qUtoPFyuzkCDObV7ymZm-CteKt1y94BA="
+                className="w-100 shadow-1-strong rounded mb-4"
+                alt="Event Image"
+              />
+            </div>
 
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://media.istockphoto.com/id/1148232091/photo/teacher-explaining-to-students-using-digital-tablet.jpg?s=612x612&w=0&k=20&c=jT-_JQ_IEBXhKUGtbtI98dJtPIb20ovr0WgrvvMsXvU="
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Waves at Sea"
-    />
+            <div className="col-lg-4 mb-4 mb-lg-0">
+              <img
+                src="https://media.istockphoto.com/id/1148232091/photo/teacher-explaining-to-students-using-digital-tablet.jpg?s=612x612&w=0&k=20&c=jT-_JQ_IEBXhKUGtbtI98dJtPIb20ovr0WgrvvMsXvU="
+                className="w-100 shadow-1-strong rounded mb-4"
+                alt="Event Image"
+              />
 
-    <img
-      src="https://images.pexels.com/photos/8612980/pexels-photo-8612980.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
-      className="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
-    />
-  </div>
-</div>
-{/* <!-- Gallery --> */}
+              <img
+                src="https://images.pexels.com/photos/8612980/pexels-photo-8612980.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                className="w-100 shadow-1-strong rounded mb-4"
+                alt="Event Image"
+              />
+            </div>
+          </div>
+          {/* Gallery */}
         </div>
       </Wrapper>
       <Footer />
@@ -293,11 +256,9 @@ const Wrapper = styled.div`
   }
 
   .btn4 {
-    margin-left: 8rem;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 50%;
-    color: white;
-    background-color: #929fba;
+    background-color: #64a9e0;
+    border-radius: 8px;
+    margin-top: 10px;
   }
 `;
+

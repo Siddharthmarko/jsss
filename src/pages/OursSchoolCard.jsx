@@ -34,7 +34,7 @@ const OursSchoolCard = () => {
                     <a href="">CBSE CIRCULARS</a>
                   </li>
                 </ul>
-              <div className="overlay">
+              <div className="">
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ const OursSchoolCard = () => {
               <li><FaArrowRight className="icon" /><a href="" className="px-4">Encyclopedia</a></li>
               <li><FaArrowRight className="icon" /><a href="" className="px-4">NCERT</a></li>
             </ul>
-          <div className="overlay">
+          <div className="">
           </div>
           </div>
           </div>
@@ -58,7 +58,7 @@ const OursSchoolCard = () => {
               <li><FaArrowRight className="icon" /><a href="" className="px-4">CBSE Exam Results</a></li>
               <li><FaArrowRight className="icon" /><a href="" className="px-4">Transfer Certificate</a></li>
             </ul>
-          <div className="overlay">
+          <div className="">
           </div>
           </div>
           </div>
