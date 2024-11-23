@@ -20,7 +20,7 @@ const ModalOverlay = styled.div`
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
- 
+  z-index: 9;
 `;
 
 const ModalContent = styled.div`

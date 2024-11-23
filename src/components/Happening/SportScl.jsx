@@ -77,7 +77,7 @@ const SportScl = () => {
                   </div>
                 </div>
 
-                <div className='col-lg-12 img-text d-flex align-items-center justify-content-center mt-4' data-aos="">
+                <div className='col-lg-12 img-text d-flex align-items-center justify-content-center my-4' data-aos="">
                   <p className=''>
                     At Doaguru School, we take pride in offering a comprehensive and diverse Physical Education (PE) curriculum that extends beyond mere exercises.
                     Our aim is to provide students with a variety of engaging activities, helping them discover a physical pursuit they truly enjoy and wish to continue beyond school.
@@ -91,31 +91,6 @@ const SportScl = () => {
           </div>
         </div>
         <div>
-  <div className='container-fluid mt-5' data-aos="zoom-in">
-    <div className='row d-flex align-items-center justify-content-center mb-5 mx-3'>
-      <div className='col-lg-6 col-md-6 Forest border d-flex align-items-center justify-content-center'>
-        <div className='z-50 d-flex align-items-center border-end '>
-          <div class="dropdown ">
-            <button class="btn dropdown-toggle ms-5 py-lg-2 px-lg-3 pr-2 pl-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              All
-            </button>
-            <ul class="dropdown-menu dropdownbox ">
-              <li><a class="dropdown-item px-2" href="#Aero"><span>2018</span></a></li>
-              <li><a class="dropdown-item px-2" href="#Mapping"><span>2016</span></a></li>
-              <li><a class="dropdown-item px-2" href="#2013"><span>2013</span></a></li>
-              <li><a class="dropdown-item px-2" href="#Ranbheri"><span>1998</span></a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className='d-flex align-items-center ms-5 place col-lg-6 col-md-6'>
-          <form class="d-flex " role="search">
-            <input class="form-control border-0 me-2 me-lg-0 py-lg-2 px-lg-5 py-md-2 px-md-1 " type="search" placeholder="Search Gallery Item..." aria-label="Search" />
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div className='row d-flex justify-content-evenly mx-3'>
     {/* First Card */}
