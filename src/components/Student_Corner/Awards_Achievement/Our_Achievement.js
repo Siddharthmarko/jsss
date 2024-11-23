@@ -22,23 +22,23 @@ function Our_Achievement() {
   const [cardData, setCardData] = useState([
     {
       id: 1,
-      title: "Excellence in Science",
+      title: "Self-Learning lab",
       year: 2024,
-      cardImageUrl: "https://via.placeholder.com/300",
+      cardImageUrl: "https://media.istockphoto.com/id/625750314/photo/kids-making-science-experiments.jpg?s=612x612&w=0&k=20&c=aZTS2ypNT_CIxqUWevLEE6dMoNEFX1Dv0s3rSLKPsVs=",
       description: "Awarded for outstanding performance in Science in 2024.",
     },
     {
       id: 2,
-      title: "Best Sports Team",
+      title: "Computer lab",
       year: 2023,
-      cardImageUrl: "https://via.placeholder.com/300",
+      cardImageUrl: "https://media.istockphoto.com/id/1072470136/photo/students-learning-computer-programming-stock-image.jpg?s=612x612&w=0&k=20&c=uPfk9HDChuDLIRnm_vBCqyjZZC5gHcD2UXaKguq0UnI=",
       description: "Recognized as the best sports team in 2023.",
     },
     {
       id: 3,
-      title: "Cultural Fest Winner",
+      title: "Debating",
       year: 2022,
-      cardImageUrl: "https://via.placeholder.com/300",
+      cardImageUrl: "https://media.istockphoto.com/id/1483675954/photo/teenagers-working-in-small-groups-during-lesson-at-school.jpg?s=612x612&w=0&k=20&c=h7bDe9lni3_mQk3cOERXM-NScV0qszI8Af6T2d4D67o=",
       description: "Awarded for winning the annual cultural festival in 2022.",
     },
     // Add more dummy data here as needed
@@ -129,14 +129,7 @@ function Our_Achievement() {
                       Read More
                     </Button>
                   )}
-
-                  <button
-                    type="button"
-                    className="btn4"
-                    onClick={() => handleShow()}
-                  >
-                    <IoIosArrowForward size={30} />
-                  </button>
+                  {/* Removed the arrow button */}
                 </div>
               </div>
             </div>
@@ -233,7 +226,7 @@ const Wrapper = styled.div`
       width: 100%;
     }
   }
-
+  
   .btn4 {
     margin-left: 8rem;
     border: none;

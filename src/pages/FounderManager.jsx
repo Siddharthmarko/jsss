@@ -32,7 +32,7 @@ const FounderManager = () => {
               <div className="" style={{}}>
                 {/* Founder Image */}
                 <img
-                  src={img2}
+                  src="https://media.istockphoto.com/id/533557326/photo/woman-in-the-office.jpg?s=612x612&w=0&k=20&c=p0MgoFmxUGKvDE7f_DkeNg37Yj24lxPcCBFXoo1SCgc="
                   alt="Miss Amelia Atkinson"
                   className="founder img-fluid my-2 mt-4"
                   id="img"
@@ -145,9 +145,10 @@ const FounderManager = () => {
             <div className="col-lg-6 col-md-12 p-5 d-flex flex-column justify-content-center align-items-center">
               {/* Manager Image */}
               <img
-                src={img3}
+                src="https://images.pexels.com/photos/5014608/pexels-photo-5014608.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                 alt="Director"
-                className="dirimg img-fluid"
+                className="dirimg img-fluid founder my-2 mt-4"
+                style={{ width: "100%", height: "auto"}} 
               />
             </div>
             <div
@@ -215,10 +216,10 @@ const StyledDiv = styled.div`
     line-height: 29px;
   }
   .dirimg {
-    height: auto;
-    width: 600px;
+    // height: auto;
+    // width: 600px;
     border: none;
-    border-radius: 1.5rem;
+    border-radius: 0 !important;
   }
   #heading {
     line-height: 1rem;

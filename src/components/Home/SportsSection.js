@@ -2,15 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 
-// Online Image Links (Placeholder URLs)
-const img1 = "https://via.placeholder.com/665x310?text=Yoga";
-const img2 = "https://via.placeholder.com/665x310?text=Running";
-const img3 = "https://via.placeholder.com/665x310?text=Sports+Day";
-const img4 = "https://via.placeholder.com/665x310?text=Dancing";
-const img5 = "https://via.placeholder.com/665x310?text=Winning";
-const img6 = "https://via.placeholder.com/665x310?text=Zig-Zag";
-const img7 = "https://via.placeholder.com/665x310?text=Running+Again";
-
 const SportsSection = () => {
   return (
     <>
@@ -35,7 +26,7 @@ const SportsSection = () => {
               <div className="leftside self-align-center">
                 <h2 className="fw-bold fs-2">Sports</h2>
                 <div className="py-3">
-                  <p className=" word-wr">
+                  <p className="word-wr">
                     A healthy mind thrives in a healthy body. Whether you enjoy basketball, football,
                     or any other sport, our expansive playground is ready for you. Engaging in sports
                     keeps you fit while also teaching valuable lessons in teamwork and sportsmanship.
@@ -45,87 +36,12 @@ const SportsSection = () => {
               </div>
             </div>
             <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" data-aos="flip-left">
-              <div
-                id="carouselExample"
-                className="carousel slide carousel-fade"
-                data-bs-ride="carousel"
-                data-bs-interval="1000"
-              >
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <img
-                      src={img1}
-                      className="d-block rounded-4 shadow img-fluid"
-                      alt="Yoga"
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      src={img2}
-                      className="d-block rounded-4 shadow img-fluid"
-                      alt="Running"
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      src={img3}
-                      className="d-block rounded-4 shadow img-fluid"
-                      alt="Sports Day"
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      src={img4}
-                      className="d-block rounded-4 shadow img-fluid"
-                      alt="Dancing"
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      src={img5}
-                      className="d-block rounded-4 shadow img-fluid"
-                      alt="Winning"
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      src={img6}
-                      className="d-block rounded-4 shadow img-fluid"
-                      alt="Zig-Zag"
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      src={img7}
-                      className="d-block rounded-4 shadow img-fluid"
-                      alt="Running Again"
-                    />
-                  </div>
-                </div>
-                <button
-                  className="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    className="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Previous</span>
-                </button>
-                <button
-                  className="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExample"
-                  data-bs-slide="next"
-                >
-                  <span
-                    className="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Next</span>
-                </button>
+              <div className="image-container">
+                <img
+                  src="https://media.istockphoto.com/id/2152254654/photo/cropped-shot-of-a-diverse-professional-players-playing-basketball-in-a-hall.jpg?s=612x612&w=0&k=20&c=I_S72HfJj67-iiyN5T2mt5CinjhQxGOeSxRRHbvK_BI="
+                  className="d-block rounded-4 shadow img-fluid"
+                  alt="Sports"
+                />
               </div>
             </div>
           </div>
@@ -165,7 +81,7 @@ const Container = styled.div`
     text-align: center;
   }
 
-  img {
+  .image-container img {
     height: 210px;
     width: 665.5px;
   }
@@ -175,7 +91,7 @@ const Container = styled.div`
       margin-top: 0;
     }
 
-    img {
+    .image-container img {
       height: 310px;
       width: 665.5px;
     }
@@ -193,7 +109,7 @@ const Container = styled.div`
       line-height: 2.0rem;
     }
 
-    img {
+    .image-container img {
       height: 470.33px;
       width: 900px;
     }
@@ -204,7 +120,7 @@ const Container = styled.div`
       font-size: 20px;
     }
 
-    img {
+    .image-container img {
       height: 310px;
       width: 665.5px;
     }
@@ -226,7 +142,7 @@ const Container = styled.div`
       text-align: start;
     }
 
-    img {
+    .image-container img {
       height: 443.33px;
     }
   }
@@ -252,7 +168,7 @@ const Container = styled.div`
       text-align: start;
     }
 
-    img {
+    .image-container img {
       height: 443.33px;
     }
   }
