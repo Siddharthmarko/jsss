@@ -63,7 +63,7 @@ const OursSchoolCard = () => {
 
 export default OursSchoolCard;
 const StyledDiv = styled.div`
-.section1{
+.section1 {
   margin-top: 1rem;
   width: 100%;
   height: 285px;
@@ -75,6 +75,18 @@ const StyledDiv = styled.div`
   overflow: hidden;
   border-radius: 0.5rem;
 }
+
+.section1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);  /* Black overlay with 30% opacity */
+  border-radius: 0.5rem;
+}
+
 .section2{
   margin-top: 1rem;
   width: 100%;
@@ -87,6 +99,17 @@ const StyledDiv = styled.div`
   overflow: hidden;
   border-radius: 0.5rem;
 }
+
+.section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);  /* Black overlay with 30% opacity */
+  border-radius: 0.5rem;
+}
 .section3{
   margin-top: 1rem;
   width: 100%;
@@ -97,6 +120,17 @@ const StyledDiv = styled.div`
   background-position: center center;
   position: relative;
   overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.section3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);  /* Black overlay with 30% opacity */
   border-radius: 0.5rem;
 }
 .overlay{

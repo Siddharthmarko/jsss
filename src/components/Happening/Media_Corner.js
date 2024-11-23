@@ -14,19 +14,19 @@ const Media_Corner = () => {
       id: 1,
       title: "Science Fair 2024",
       year: 2024,
-      cardimg: "https://via.placeholder.com/400",
+      cardimg: "https://images.pexels.com/photos/7869049/pexels-photo-7869049.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     },
     {
       id: 2,
       title: "Sports Day Highlights 2023",
       year: 2023,
-      cardimg: "https://via.placeholder.com/400",
+      cardimg: "https://images.pexels.com/photos/8941620/pexels-photo-8941620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     {
       id: 3,
       title: "Cultural Festival 2022",
       year: 2022,
-      cardimg: "https://via.placeholder.com/400",
+      cardimg: "https://images.pexels.com/photos/8554137/pexels-photo-8554137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
     // Add more dummy data here as needed
   ]);
@@ -110,9 +110,9 @@ const Media_Corner = () => {
                   <img
                     src={card.cardimg}
                     height={400}
-                    className="card-img-top"
+                    className="card-img-top d-block w-100"
                     alt={`Card ${card.id}`}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer", overflow: "hidden" }}
                   />
 
                   <div className="card-body">
@@ -139,6 +139,7 @@ const Wrapper = styled.div`
   .card {
     width: 100%;
     height: 100%;
+    
     @media screen and (max-width: 768px) {
       width: 100%;
       height: 100%;
@@ -164,6 +165,8 @@ const Wrapper = styled.div`
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
     background-color: #7d38c6;
+   
+   
   }
 
   #card1:hover {
