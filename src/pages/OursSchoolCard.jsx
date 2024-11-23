@@ -1,9 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import styled from "styled-components";
-// import backgroundImage from "../all imgs/our cards/1U7A9251-scaled.jpg"
-// import backgroundImage1 from "../all imgs/our cards/Investiture_Ceremony.jpg"
-// import backgroundImage2 from "../all imgs/our cards/Screenshot-80.png"
 import new1 from "../all imgs/home/school1.jpg"
 import new2 from "../all imgs/home/trophy1.jpg"
 import new3 from "../all imgs/home/linkimg.jpg"
@@ -21,10 +18,6 @@ const OursSchoolCard = () => {
                     <FaArrowRight className="icon" />
                     <a href="">CBSE</a>
                   </li>
-                  {/* <li>
-                    <FaArrowRight className="icon" />
-                    <a href="https://vvm.org.in/" >Vidyarthi Vigyan Manthan</a>
-                  </li> */}
                   <li>
                     <FaArrowRight className="icon" />
                     <a href="">National Digital Library</a>

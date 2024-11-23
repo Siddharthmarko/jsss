@@ -3,19 +3,22 @@ import styled from "styled-components";
 import Header from "../../Layout/Header";
 import Header2 from "../../Layout/Header2";
 import Footer from "../../Layout/Footer";
-import pdf1 from "../../all imgs/Examination-Pattern-for-I-to-V.pdf";
-import pdf2 from "../../all imgs/Examination-Pattern-for-class-VI-to-VIII.pdf";
-import pdf3 from "../../all imgs/Examination-Pattern-for-class-IX-and-X.pdf";
-import pdf4 from "../../all imgs/Examination-Pattern-for-class-XI-and-XII.pdf";
 import Copy from "../../Layout/Copy";
+
+// Demo PDF Links (Placeholder URLs)
+const pdf1 = "https://www.w3.org/WAI/WCAG21/quickref/WCAG2.1%20Quick%20Reference%20-%20PDF%20Demo.pdf";
+const pdf2 = "https://www.w3.org/WAI/WCAG21/quickref/WCAG2.1%20Quick%20Reference%20-%20PDF%20Demo.pdf";
+const pdf3 = "https://www.w3.org/WAI/WCAG21/quickref/WCAG2.1%20Quick%20Reference%20-%20PDF%20Demo.pdf";
+const pdf4 = "https://www.w3.org/WAI/WCAG21/quickref/WCAG2.1%20Quick%20Reference%20-%20PDF%20Demo.pdf";
+
 const Examination = () => {
   return (
     <>
       <Header />
-      <Header2 heading="Examination Pattern"/>
+      <Header2 heading="Examination Pattern" />
       <Container>
         <div className="mt-5 mb-2 top-heading">
-          <h2 className="d-flex justify-content-center align-items-center mb-lg-0  mt-lg-5 mt-sm-0">
+          <h2 className="d-flex justify-content-center align-items-center mb-lg-0 mt-lg-5 mt-sm-0">
             Examination Pattern
           </h2>
         </div>
@@ -26,8 +29,8 @@ const Examination = () => {
                 <div className="col-lg-6 exam mt-lg-0">
                   <h2>for class I - V</h2>
                   <div className="col-lg-3 col-sm-6">
-                    <a href={pdf1} target="_blank">
-                      <button type="button" class="btn button p-2 ms-lg-5 mt-3">
+                    <a href={pdf1} target="_blank" rel="noopener noreferrer">
+                      <button type="button" className="btn button p-2 ms-lg-5 mt-3">
                         Download
                       </button>
                     </a>
@@ -37,11 +40,8 @@ const Examination = () => {
                 <div className="col-lg-6 exam mt-lg-5">
                   <h2>for class VI - VIII</h2>
                   <div className="col-lg-3 col-sm-6">
-                    <a
-                      href={pdf2}
-                      target="_blank"
-                    >
-                      <button type="button" class="btn button p-2 ms-lg-5 mt-3">
+                    <a href={pdf2} target="_blank" rel="noopener noreferrer">
+                      <button type="button" className="btn button p-2 ms-lg-5 mt-3">
                         Download
                       </button>
                     </a>
@@ -55,11 +55,8 @@ const Examination = () => {
                 <div className="col-lg-6 exam mt-lg-5">
                   <h2>for class IX -X</h2>
                   <div className="col-lg-3 col-sm-6">
-                    <a
-                      href={pdf3}
-                      target="_blank"
-                    >
-                      <button type="button" class="btn button p-2 ms-lg-5 mt-3">
+                    <a href={pdf3} target="_blank" rel="noopener noreferrer">
+                      <button type="button" className="btn button p-2 ms-lg-5 mt-3">
                         Download
                       </button>
                     </a>
@@ -69,11 +66,8 @@ const Examination = () => {
                 <div className="col-lg-6 exam mt-lg-5">
                   <h2>for class XI - XII</h2>
                   <div className="col-lg-3 col-sm-6">
-                    <a
-                      href={pdf4}
-                      target="_blank"
-                    >
-                      <button type="button" class="btn button p-2 ms-lg-5 mt-3">
+                    <a href={pdf4} target="_blank" rel="noopener noreferrer">
+                      <button type="button" className="btn button p-2 ms-lg-5 mt-3">
                         Download
                       </button>
                     </a>
@@ -85,7 +79,7 @@ const Examination = () => {
         </div>
       </Container>
       <Footer />
-      <Copy/>
+      <Copy />
     </>
   );
 };

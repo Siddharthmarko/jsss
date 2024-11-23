@@ -1,14 +1,15 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
-import img1 from "../../all imgs/home/yoga.jpg";
-import img2 from "../../all imgs/home/running.jpg";
-import img3 from "../../all imgs/home/sportsday.jpg";
-import img4 from "../../all imgs/home/dancing.webp";
-import img5 from "../../all imgs/home/winning.jpg";
-import img6 from "../../all imgs/home/zig-zag.jpg";
-import img7 from "../../all imgs/home/running.jpg";
 
+// Online Image Links (Placeholder URLs)
+const img1 = "https://via.placeholder.com/665x310?text=Yoga";
+const img2 = "https://via.placeholder.com/665x310?text=Running";
+const img3 = "https://via.placeholder.com/665x310?text=Sports+Day";
+const img4 = "https://via.placeholder.com/665x310?text=Dancing";
+const img5 = "https://via.placeholder.com/665x310?text=Winning";
+const img6 = "https://via.placeholder.com/665x310?text=Zig-Zag";
+const img7 = "https://via.placeholder.com/665x310?text=Running+Again";
 
 const SportsSection = () => {
   return (
@@ -50,54 +51,54 @@ const SportsSection = () => {
                 data-bs-ride="carousel"
                 data-bs-interval="1000"
               >
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
                     <img
                       src={img1}
                       className="d-block rounded-4 shadow img-fluid"
-                      alt="..."
+                      alt="Yoga"
                     />
                   </div>
                   <div className="carousel-item">
                     <img
                       src={img2}
                       className="d-block rounded-4 shadow img-fluid"
-                      alt="..."
+                      alt="Running"
                     />
                   </div>
                   <div className="carousel-item">
                     <img
                       src={img3}
                       className="d-block rounded-4 shadow img-fluid"
-                      alt="..."
+                      alt="Sports Day"
                     />
                   </div>
                   <div className="carousel-item">
                     <img
                       src={img4}
                       className="d-block rounded-4 shadow img-fluid"
-                      alt="..."
+                      alt="Dancing"
                     />
                   </div>
                   <div className="carousel-item">
                     <img
                       src={img5}
                       className="d-block rounded-4 shadow img-fluid"
-                      alt="..."
+                      alt="Winning"
                     />
                   </div>
                   <div className="carousel-item">
                     <img
                       src={img6}
                       className="d-block rounded-4 shadow img-fluid"
-                      alt="..."
+                      alt="Zig-Zag"
                     />
                   </div>
                   <div className="carousel-item">
                     <img
                       src={img7}
                       className="d-block rounded-4 shadow img-fluid"
-                      alt="..."
+                      alt="Running Again"
                     />
                   </div>
                 </div>
@@ -135,17 +136,14 @@ const SportsSection = () => {
 };
 
 export default SportsSection;
+
 const Container = styled.div`
-
-
-
-.facility {
+  .facility {
     margin-top: 0;
     margin-bottom: 3rem;
   }
 
   .word-wr {
-
     font-size: 14px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -154,14 +152,13 @@ const Container = styled.div`
     text-align: center;
   }
 
-
   .curse {
     color: #7d38c6;
     font-family: 'Vibur', cursive;
     font-weight: 600;
     text-align: center;
-
   }
+
   h2 {
     font-family: "Roboto Flex", Sans-serif;
     font-weight: 700;
@@ -173,143 +170,90 @@ const Container = styled.div`
     width: 665.5px;
   }
 
-
-
   @media (min-width: 430px) {
-  .leftside {
-    margin-top: 0;
+    .leftside {
+      margin-top: 0;
+    }
+
+    img {
+      height: 310px;
+      width: 665.5px;
+    }
   }
 
-  img {
-    height: 310px;
-    width: 665.5px;
-  }
-}
-
-
-
-
-@media (min-width: 576px) {
-  .word-wr {
-    font-size: 20px;
+  @media (min-width: 576px) {
+    .word-wr {
+      font-size: 20px;
+    }
   }
 
+  @media (min-width: 768px) {
+    .word-wr {
+      font-size: 20px;
+      line-height: 2.0rem;
+    }
 
-}
-
-@media (min-width: 768px) {
- 
-   
-.word-wr {
-    font-size: 20px;
-    /* letter-spacing: 1px; */
-    line-height: 2.0rem;
-
-  }
-  
-  .imgBox img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
+    img {
+      height: 470.33px;
+      width: 900px;
+    }
   }
 
-  .leftside {
-    /* margin-top: 20px; */
-    padding-left: 4px;
+  @media (min-width: 992px) {
+    .word-wr {
+      font-size: 20px;
+    }
+
+    img {
+      height: 310px;
+      width: 665.5px;
+    }
   }
 
-  img {
-    /* height: 443.33px; */
-    height: 470.33px;
-    width: 900px;
+  @media (min-width: 1200px) {
+    .word-wr {
+      font-size: 20px;
+      line-height: 2.5rem;
+      text-align: start;
+      letter-spacing: 1px;
+    }
+
+    .curse {
+      text-align: start;
+    }
+
+    h2 {
+      text-align: start;
+    }
+
+    img {
+      height: 443.33px;
+    }
   }
 
-  
-}
+  @media (min-width: 1400px) {
+    .word-wr {
+      font-size: 20px;
+      line-height: 2.5rem;
+      text-align: start;
+      letter-spacing: 1px;
+    }
 
-@media (min-width: 992px) {
-  .word-wr {
-    font-size: 20px;
+    .leftside {
+      margin-top: 20px;
+      padding-left: 4px;
+    }
+
+    .curse {
+      text-align: start;
+    }
+
+    h2 {
+      text-align: start;
+    }
+
+    img {
+      height: 443.33px;
+    }
   }
-
-  img {
-    /* height: 443.33px;
-    width: 800px; */
-    height: 310px;
-    width: 665.5px;
-  } 
-
-}
-
-
-
-@media (min-width: 1200px) {
-  
-  .word-wr {
-    font-size: 20px;
-    line-height: 2.5rem;
-    text-align: start;
-    letter-spacing: 1px;
-    line-height: 2.5rem;
-
-  }
-
-  .curse {
-    text-align: start;
-  }
-
-  h2 {
-    text-align: start;
-  }
-
-  .leftside {
-    /* margin-top: 20px; */
-    padding-left: 4px;
-  }
-
-  img {
-    height: 443.33px;
-  
-  }
-
-
-}
-
-
-@media (min-width: 1400px) {
-   
-  .word-wr {
-    font-size: 20px;
-    line-height: 2.5rem;
-    text-align: start;
-    letter-spacing: 1px;
-    line-height: 2.5rem;
-
-  }
-
-  .leftside {
-    margin-top: 20px;
-    padding-left: 4px;
-  }
-
-  .curse {
-    text-align: start;
-  }
-
-  h2 {
-    text-align: start;
-  }
-
-  img {
-    height: 443.33px;
-    
-  }
-  
-
-}
-
-
-
-
-
 `;

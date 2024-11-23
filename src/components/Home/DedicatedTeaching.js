@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../../all imgs/home/00000000000000a.webp";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import img1 from "../../all imgs/home/teacherteach.webp";

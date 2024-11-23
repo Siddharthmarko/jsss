@@ -28,7 +28,6 @@ const FlippingBookEmbed = () => {
         style={{ maxWidth: "100%" }}
         rel="noopener noreferrer"
       >
-        Doaguruseniorsecondary.ac_.in_home_school-magazine.php_ (1)
       </a>
 
       

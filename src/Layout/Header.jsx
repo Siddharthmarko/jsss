@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
-import pdf from "../all imgs/Mandatory-Disclosure-Details-_-SARAS-4.0-2023-24-1New.pdf";
-import pdf2 from "../all imgs/Fee-instructions-2023-24-1.pdf";
-import pdf3 from "../all imgs/Fee-Structure-2023-24-b9.pdf";
-import pdf4 from "../all imgs/Book-List-I-X-2023-24.pdf";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
@@ -253,28 +249,9 @@ export default function Header() {
                         Sports Gallery
                       </Link>
                     </li>
-                    {/* <li>
-                    <a href="https://test.Doaguru.com/jss/photo-gallery/" className="dropdown-item text-light ">
-                      Photo Gallery
-                    </a>
-                  </li> */}
-                    {/* <li>
-                    <a href="https://test.Doaguru.com/jss/media-corner-2/" className="dropdown-item text-light ">
-                      Media Corner
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://test.Doaguru.com/jss/our-magazine-copy-2/" className="dropdown-item text-light ">
-                      Yoga Day
-                    </a>
-                  </li> */}
+                   
                   </ul>
                 </li>
-                {/* <li className="nav-item mx-2">
-                  <Link to="/latest-events" className="nav-link text-light ">
-                    Upcoming Events
-                  </Link>
-                </li> */}
                 <li className="nav-item dropdown mx-2">
                   <a
                     href="#"
@@ -319,20 +296,7 @@ export default function Header() {
                         height: "0px",
                       }}
                     />
-                    {/* <li>
-                      <Link
-                        to="/appointment-with-heads"
-                        className="dropdown-item text-light "
-                      >
-                        Appointment With Heads
-                      </Link>
-                    </li>
-                    <hr
-                      style={{
-                        color: "white",
-                        height: "0px",
-                      }}
-                    /> */}
+                    
                     <li>
                       <Link
                         to="/awards-and-achievements"
@@ -347,21 +311,7 @@ export default function Header() {
                         height: "0px",
                       }}
                     />
-                    {/* <li>
-                      <Link
-                        to={pdf4}
-                        target="_blank"
-                        className="dropdown-item text-light "
-                      >
-                        Book List 2023-24
-                      </Link>
-                    </li>
-                    <hr
-                      style={{
-                        color: "white",
-                        height: "0px",
-                      }}
-                    /> */}
+               
                     <li>
                       <Link
                         to="/birthday-corner"
@@ -376,34 +326,7 @@ export default function Header() {
                         height: "0px",
                       }}
                     />
-                    {/* <li>
-                      <Link
-                        to="/examination-pattern"
-                        className="dropdown-item text-light  "
-                      >
-                        Examination Pattern
-                      </Link>
-                    </li>
-                    <hr
-                      style={{
-                        color: "white",
-                        height: "0px",
-                      }}
-                    /> */}
-                    {/* <li>
-                      <Link
-                        to="/download-certificate"
-                        className="dropdown-item text-light "
-                      >
-                        Transfer Certificate
-                      </Link>
-                    </li>
-                    <hr
-                      style={{
-                        color: "white",
-                        height: "0px",
-                      }}
-                    /> */}
+                 
                     <li>
                       <Link
                         to="/our-uniform"
@@ -420,21 +343,9 @@ export default function Header() {
                   </Link>
                 </li>
 
-                {/* <li className="nav-item mx-2">
-                  <a className="nav-link text-light" style={{ cursor: 'pointer' }}>
-                    Buy Images
-                  </a>
-                </li> */}
-                {/* <li className="nav-item mx-2">
-                  <a
-                    className="nav-link text-light " style={{ cursor: 'pointer' }}
-                  >
-                    Notice Board
-                  </a>
-                </li> */}
+              
                 <li className="nav-item mx-2">
                   <a
-                    // href="https://jss.joyseniorsecondary.ac.in/contactus"
                     href="/contact-us"
                     className="nav-link text-light "
                   >
@@ -445,20 +356,7 @@ export default function Header() {
             </div>
           </div>
         </nav>
-        {/* <div className="search-container d-flex align-items-center">
-          <div className="search-btn">
-            <FaSearch className="text-white search-icon" />
-          </div>
-          <input
-            type="text"
-            className="search-hover"
-            placeholder="Search here..."
-
-          />
-        </div> */}
-
-
-        {/* new one  */}
+     
 
 
         <div className="search-container d-flex align-items-center">

@@ -148,7 +148,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new1}
                   alt="First slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -199,7 +198,6 @@ const OurSchool = () => {
                   
                 />
               </Carousel.Item>
-              {/* Add more Carousel.Item for additional slides */}
             </Carousel>
           </div>
         </div>
@@ -212,7 +210,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new8}
                   alt="First slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -220,7 +217,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new9}
                   alt="Second slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -228,7 +224,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new10}
                   alt="Third slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -236,7 +231,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new11}
                   alt="four slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -244,50 +238,9 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new12}
                   alt="five slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
-              {/* <Carousel.Item>
-                <img
-                  className="d-block img-fluid img1"
-                  src={img14}
-                  alt="six slide"
-                  style={{ width: "100%", height: "350px" }}
-                />
-              </Carousel.Item> */}
-              {/* <Carousel.Item>
-                <img
-                  className="d-block img-fluid img1"
-                  src={img15}
-                  alt="seven slide"
-                  style={{ width: "100%", height: "350px" }}
-                />
-              </Carousel.Item> */}
-              {/* <Carousel.Item>
-                <img
-                  className="d-block img-fluid img1"
-                  src={img16}
-                  alt="seven slide"
-                  style={{ width: "100%", height: "350px" }}
-                />
-              </Carousel.Item> */}
-              {/* <Carousel.Item>
-                <img
-                  className="d-block img-fluid img1"
-                  src={img17}
-                  alt="seven slide"
-                  style={{ width: "100%", height: "350px" }}
-                />
-              </Carousel.Item> */}
-              {/* <Carousel.Item>
-                <img
-                  className="d-block img-fluid img1"
-                  src={img18}
-                  alt="seven slide"
-                  style={{ width: "100%", height: "350px" }}
-                />
-              </Carousel.Item> */}
-              {/* Add more Carousel.Item for additional slides */}
+           
             </Carousel>
           </div>
           <div className="col-lg-6 col-md-12 ">
@@ -319,7 +272,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new12}
                   alt="First slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -327,7 +279,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new13}
                   alt="Second slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -335,7 +286,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new14}
                   alt="Third slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -343,7 +293,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new15}
                   alt="four slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
             </Carousel>
@@ -358,7 +307,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new16}
                   alt="First slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -366,7 +314,6 @@ const OurSchool = () => {
                   className="Holisticimg d-block img-fluid img1"
                   src={new17}
                   alt="Second slide"
-                  // style={{ width: "100%", height: "350px" }}
                 />
               </Carousel.Item>
             </Carousel>
@@ -397,7 +344,7 @@ const OurSchool = () => {
                   className="Holisticimg  d-block img-fluid img1"
                   src={new18}
                   alt="First slide"
-                  // style={{ width: "100%", height: "350px" }}
+
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -405,7 +352,7 @@ const OurSchool = () => {
                   className="Holisticimg  d-block img-fluid img1"
                   src={new19}
                   alt="Second slide"
-                  // style={{ width: "100%", height: "350px" }}
+
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -413,7 +360,7 @@ const OurSchool = () => {
                   className="Holisticimg  d-block img-fluid img1"
                   src={new20}
                   alt="Third slide"
-                  // style={{ width: "100%", height: "350px" }}
+
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -421,17 +368,9 @@ const OurSchool = () => {
                   className="Holisticimg  d-block img-fluid img1"
                   src={new21}
                   alt="four slide"
-                  // style={{ width: "100%", height: "350px" }}
+
                 />
               </Carousel.Item>
-              {/* <Carousel.Item>
-                <img
-                  className="d-block img-fluid img1"
-                  src={img29}
-                  alt="four slide"
-                  style={{ width: "100%", height: "350px" }}
-                />
-              </Carousel.Item> */}
             </Carousel>
           </div>
         </div>
@@ -444,7 +383,7 @@ const OurSchool = () => {
                   className="Holisticimg  d-block img-fluid img1"
                   src={new22}
                   alt="First slide"
-                  // style={{ width: "100%", height: "350px" }}
+
                 />
               </Carousel.Item>
               <Carousel.Item>
@@ -452,33 +391,10 @@ const OurSchool = () => {
                   className="Holisticimg  d-block img-fluid img1"
                   src={new23}
                   alt="Second slide"
-                  // style={{ width: "100%", height: "350px" }}
+
                 />
               </Carousel.Item>
-              {/* <Carousel.Item>
-                <img
-                  className="d-block img-fluid img1"
-                  src={img32}
-                  alt="Second slide"
-                  style={{ width: "100%", height: "350px" }}
-                />
-              </Carousel.Item> */}
-              {/* <Carousel.Item>
-                <img
-                  className="d-block img-fluid img1"
-                  src={img33}
-                  alt="Second slide"
-                  style={{ width: "100%", height: "350px" }}
-                />
-                 <Carousel.Item>
-                <img
-                  className="d-block img-fluid img1"
-                  src={img34}
-                  alt="Second slide"
-                  style={{ width: "100%", height: "350px" }}
-                />
-              </Carousel.Item>
-              </Carousel.Item> */}
+           
             </Carousel>
           </div>
           <div className="col-lg-6 col-md-12 ">
