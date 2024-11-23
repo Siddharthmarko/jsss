@@ -44,21 +44,21 @@ function Footer() {
                     <img src="" alt="" />
                     <a
                       className="btn btn-floating m-1 px-md-2"
-                      href="https://www.youtube.com/@Doaguru.infosystems"
+                      href="#"
                       role="button"
                     >
                       <i class="bi bi-youtube icon text-danger"></i>
                     </a>
                     <a
                       className="btn btn-floating m-1 px-md-2"
-                      href="https://www.facebook.com/Digitalmarketingandwebsitedesigncompany/"
+                      href="#"
                       role="button"
                     >
                       <i class="bi bi-facebook icon text-primary"></i>
                     </a>
                     <a
                       className="btn btn-floating m-1 px-md-2"
-                      href="https://www.instagram.com/Doaguruinfosystems/?hl=en"
+                      href="#"
                       role="button"
                     >
                       <i
@@ -68,7 +68,7 @@ function Footer() {
                     </a>
                     <a
                       className="btn btn-floating m-1 px-md-2"
-                      href="https://www.linkedin.com/company/Doaguru-info-sys/"
+                      href="#"
                       role="button"
                     >
                       <i class="bi bi-linkedin icon text-primary"></i>

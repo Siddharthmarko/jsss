@@ -147,7 +147,7 @@ const FounderManager = () => {
               <img
                 src="https://images.pexels.com/photos/5014608/pexels-photo-5014608.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                 alt="Director"
-                className="dirimg img-fluid founder my-2 mt-4"
+                className="dirimg img-fluid  my-2 mt-4"
                 style={{ width: "100%", height: "auto"}} 
               />
             </div>
@@ -216,8 +216,8 @@ const StyledDiv = styled.div`
     line-height: 29px;
   }
   .dirimg {
-    // height: auto;
-    // width: 600px;
+    height: auto;
+    width: 600px;
     border: none;
     border-radius: 0 !important;
   }
