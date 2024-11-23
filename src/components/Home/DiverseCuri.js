@@ -1,17 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import img1 from '../../all imgs/home/painting.jpg';
-import $ from "jquery";
 import { Helmet } from "react-helmet";
 window.$ = window.jQuery = require("jquery");
 
 const DiverseCuri = () => {
-  // const carouselRef = useRef(null);
-
-  // useEffect(() => {
-  //   // Initialize the Bootstrap carousel when the component mounts
-  //   $(carouselRef.current).carousel();
-  // }, []);
   return (
     <>
       <Helmet>
@@ -47,9 +40,6 @@ const DiverseCuri = () => {
               <div
                 id="carouselExample"
                 className="carousel slide carousel-fade"
-                // data-bs-ride="carousel"
-                // data-bs-interval="2000"
-                // ref={carouselRef}
               >
                 <div className="carousel-inner">
                   <div className="carousel-item active">

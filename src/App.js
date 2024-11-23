@@ -7,7 +7,6 @@ import HomePage from "./pages/HomePage";
 import VissionMission from "./pages/VissionMission";
 import SchoolMagazine from "./pages/SchoolMagazine";
 import { useSelector } from "react-redux";
-import UploadCertificate from "./admin/pages/UploadCertificate";
 import Birthday from "./components/BirthdayCorner/Birthday";
 import AwardsAchievement from "./pages/AwardsAchievement";
 import Events from "./components/Happening/Events";
@@ -22,7 +21,6 @@ import Photo_Gallery from "./components/Happening/Photo_Gallery";
 import Activities from "./components/Student_Corner/Activities";
 
 function App() {
-  const { currentUser } = useSelector((state) => state.user);
   return (
     <div className="App">
       <Routes>
@@ -51,13 +49,6 @@ function App() {
         <Route path="/eregister" element={<E_Registration />} />
         <Route
           path="/AdminHome"
-        />
-
-        <Route
-          path="/uploadcertificate"
-          element={
-            currentUser ? <UploadCertificate /> : <Navigate to="/admin-LogIn" />
-          }
         />
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>

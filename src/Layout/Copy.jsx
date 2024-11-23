@@ -2,20 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const Copy = () => {
-  // if (typeof(Storage) !== "undefined") {
-
-  //   let visitCount = localStorage.getItem('visitCount') || 0;
-
-  //    document.getElementById('visitCount').textContent = visitCount;
-
-  //    visitCount++;
-
-  //    localStorage.setItem('visitCount', visitCount);
-
-  //  } else {
-  //    console.log('LocalStorage is not supported. Unable to track visits.');
-  //  }
-
   return (
     <>
       <Container>
@@ -32,14 +18,12 @@ const Copy = () => {
 
                 <div className="col-lg-4 mt-3 col-sm-12 d-flex justify-content-center">
                   <div className="d-flex justify-content-center ">
-                    {/* <div className="col-md-6 col-sm-12 text-center "> */}
                     <div className="d-flex justify-content-center mx-0">
                       <p><a href="">TERMS AND CONDITION</a></p>
                     </div>
                     <div className="">
                       <p>|</p>
                     </div>
-                    {/* <div className="col-sm-4  text-center "> */}
                     <div className="text-center ">
                       <p><a href="">PRIVACY POLICY</a></p>
                     </div>
@@ -47,7 +31,6 @@ const Copy = () => {
                 </div>
 
                 <div className="col-lg-2 col-sm-12 mt-3 text-center">
-                  {/* <h4 id="visitCount">000346</h4> */}
                 </div>
               </div>
             </div>

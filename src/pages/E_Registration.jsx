@@ -19,10 +19,7 @@ const E_Registration = () => {
                 <div className="col-lg-3 col-md-3 col-sm-1 "></div>
 
                 <div className="col-lg-6 col-md-7  col-sm-10 mt-5">
-                  {/* <h3 className="text-center">
-                    The eRegistration will begin from 10th January 2024, 08:00
-                    am onwards.
-                  </h3> */}
+                
                   <div className="d-flex justify-content-center mt-2">
                     <a
                       href="https://joyjbl.nascorptechnologies.com/gw/gls/onlineAppForms?code=tqmeQ7"

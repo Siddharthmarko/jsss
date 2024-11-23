@@ -4,13 +4,6 @@ import { styled } from "styled-components";
 import img1 from "../all imgs/home/britishschool.jpg"
 import logo from "../all imgs/home/DSlogo4.png"
 
-// import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faChevronUp,
-//   faChevronDown,
-// } from "@fortawesome/free-solid-svg-icons";
-
 function Header2(props) {
   const [
     submenusOpen,
@@ -22,15 +15,6 @@ function Header2(props) {
     studentcorner: false,
   });
 
-  // const handleSubMenuToggle = (
-  //   submenuName
-  // ) => {
-  //   setSubmenusOpen((prevState) => ({
-  //     ...prevState,
-  //     [submenuName]:
-  //       !prevState[submenuName],
-  //   }));
-  // };
   return (
     <>
       <Wrapper>

@@ -90,148 +90,118 @@ const SportScl = () => {
             </div>
           </div>
         </div>
-
-        <div className='container-fluid mt-5' data-aos="zoom-in">
-
-          <div className='row d-flex align-items-center justify-content-center mb-5 mx-3'>
-            <div className=' col-lg-6 col-md-6 Forest border d-flex align-items-center justify-content-center'>
-
-              <div className='z-50 d-flex align-items-center border-end '>
-                <div class="dropdown ">
-                  <button class="btn dropdown-toggle ms-5 py-lg-2 px-lg-3 pr-2 pl-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    All
-                  </button>
-                  <ul class="dropdown-menu dropdownbox ">
-                    <li><a class="dropdown-item px-2" href="#Aero"><span>2018</span></a></li>
-                    <li><a class="dropdown-item px-2" href="#Mapping"><span>2016</span></a></li>
-                    <li><a class="dropdown-item px-2" href="#2013"><span>2013</span></a></li>
-                    <li><a class="dropdown-item px-2" href="#Ranbheri"><span>1998</span></a></li>
-                  </ul>
-                </div>
-              </div>
-
-             
-
-              <div className='d-flex align-items-center ms-5 place col-lg-6 col-md-6'>
-                <form class="d-flex " role="search">
-                  <input class="form-control border-0 me-2 me-lg-0 py-lg-2 px-lg-5 py-md-2 px-md-1 " type="search" placeholder="Search Gallery Item..." aria-label="Search" />
-                </form>
-              </div>
-
-            </div>
+        <div>
+  <div className='container-fluid mt-5' data-aos="zoom-in">
+    <div className='row d-flex align-items-center justify-content-center mb-5 mx-3'>
+      <div className='col-lg-6 col-md-6 Forest border d-flex align-items-center justify-content-center'>
+        <div className='z-50 d-flex align-items-center border-end '>
+          <div class="dropdown ">
+            <button class="btn dropdown-toggle ms-5 py-lg-2 px-lg-3 pr-2 pl-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              All
+            </button>
+            <ul class="dropdown-menu dropdownbox ">
+              <li><a class="dropdown-item px-2" href="#Aero"><span>2018</span></a></li>
+              <li><a class="dropdown-item px-2" href="#Mapping"><span>2016</span></a></li>
+              <li><a class="dropdown-item px-2" href="#2013"><span>2013</span></a></li>
+              <li><a class="dropdown-item px-2" href="#Ranbheri"><span>1998</span></a></li>
+            </ul>
           </div>
         </div>
 
-        <div className='row d-flex justify-content-evenly mx-3'>
-
-          <div className='card-cont col-lg-3 col-md-5 mb-5' onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}>
-            <div class="card cards">
-              <img src={Bhaag_milka} class="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
-              {isHovered && <a href='https://photos.google.com/share/AF1QipNE_GFBzXVYWYXzWq-xw_MHcB9y_ddlyBkGzkjIuNqeo1zKxpYeMlWMgMnacZOq7Q/photo/AF1QipNBvhEIN-Dz3h1wcnbJ9xvj3lKSRfrgvmR5ttRJ?key=TTR0LVUzOEFxcmJ1Q0hmMkdiRTFKYkdCeXg2eFpn' style={{ position: 'absolute', bottom: '69%', left: '43%', transform: 'translate(-50%, 50%)' }}>
-                <img src={chainlink} className="z-n1 connection" alt="link" height={50} />
-              </a>}
-
-              <div class="card-body">
-                <h4 class="fg-item-title d-flex justify-content-evenly mt-4">National sports 2017</h4>
-                <div className='d-flex justify-content-center mb-5 mt-4'>
-                  <button type="button" className="btn btn-primary button">Description</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className=' col-lg-3 col-md-5 mb-5' onMouseEnter={() => setSecond(true)}
-            onMouseLeave={() => setSecond(false)}>
-            <div class="card cards">
-              <img src={aero} class="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
-              {second && <a href='https://photos.google.com/share/AF1QipOSHCWvZzr6u51C1Cva7XvMpTIqnffhD5iiz7FZ3WW8-nN0CcVuyGAs1dNCJIMcRw/photo/AF1QipPMBTpC46KKKe2ghCX9N-NJ5lSYmm02_stkYugL?key=cHdfbFdwSW5WaUhiYm5PQ1lhbmR0NnA5SkY5UUFB' style={{ position: 'absolute', bottom: '69%', left: '41%', transform: 'translate(-50%, 50%)' }} >
-                <img src={chainlink} class="connection" alt="link" height={50} />
-              </a>}
-
-              <div class="card-body">
-                <h4 class="fg-item-title d-flex justify-content-evenly mt-4">National Archery 2013</h4>
-                <div className='d-flex justify-content-center mb-5 mt-4'>
-                  <button type="button" class="btn btn-primary button">Description</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className='col-lg-3 col-md-5 mb-5' onMouseEnter={() => setThird(true)}
-            onMouseLeave={() => setThird(false)}>
-            <div class="card cards">
-              <img src={dancing} class="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
-              {third && <a href='https://photos.google.com/share/AF1QipOSHCWvZzr6u51C1Cva7XvMpTIqnffhD5iiz7FZ3WW8-nN0CcVuyGAs1dNCJIMcRw/photo/AF1QipPMBTpC46KKKe2ghCX9N-NJ5lSYmm02_stkYugL?key=cHdfbFdwSW5WaUhiYm5PQ1lhbmR0NnA5SkY5UUFB' style={{ position: 'absolute', bottom: '69%', left: '49%', transform: 'translate(-50%, 50%)' }}>
-                <img src={chainlink} class="connection" alt="link" height={50} />
-              </a>}
-
-              <div class="card-body">
-                <h4 class="fg-item-title d-flex justify-content-evenly mt-4">Annual Sports 2011</h4>
-                <div className='d-flex justify-content-center mb-5 mt-4'>
-                  <button type="button" class="btn btn-primary button">Description</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className='d-flex align-items-center ms-5 place col-lg-6 col-md-6'>
+          <form class="d-flex " role="search">
+            <input class="form-control border-0 me-2 me-lg-0 py-lg-2 px-lg-5 py-md-2 px-md-1 " type="search" placeholder="Search Gallery Item..." aria-label="Search" />
+          </form>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <div className='row d-flex justify-content-evenly mx-3'>
-
-          <div className='col-lg-3 col-md-5 mb-5' onMouseEnter={() => setFourth(true)}
-            onMouseLeave={() => setFourth(false)}>
-            <div class="card">
-              <img src={Bhaag_milka2} class="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
-              {fourth && <a href='https://photos.google.com/share/AF1QipMSq0l3Oh7nZVt5jxZu2SpTRFAlEk1Ra1FTmJh43MuS3fho2mXJpqe5exX55kg0cA/photo/AF1QipOfKwzb7xhOwsiY7Lo6hazJTy_YCcVlbl09Dmhu?key=amNkTjh2TWlrVUtXSDJVOHVSNllYT1d5UmhESE9R' style={{ position: 'absolute', bottom: '69%', left: '43%', transform: 'translate(-50%, 50%)' }} >
-                <img src={chainlink} class="connection " alt="link" height={50} />
-              </a>}
-
-              <div class="card-body">
-                <h4 class="fg-item-title d-flex justify-content-evenly mt-4">Annual Sports 2010</h4>
-                <div className='d-flex justify-content-center mb-5 mt-4'>
-                  <button type="button" class="btn btn-primary button">Description</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className='col-lg-3 col-md-5 mb-5' onMouseEnter={() => setFifth(true)}
-            onMouseLeave={() => setFifth(false)}>
-            <div class="card">
-              <img src={aero2} className="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
-              {fifth && <a href='https://photos.google.com/share/AF1QipMf74HNHMWsnX6x30DxkO8m61cvab9lzKjZmfHNHDTo69SiNS9BsqvRaJLxAmzZtw/photo/AF1QipOrx4Fx-MvzTdOns-0StzL9WykRe5p1uhpyhDNf?key=N2hNejJvNWt4Smd6Q3ppaUQyZ2g3NTVCVXhXdTVB' style={{ position: 'absolute', bottom: '69%', left: '41%', transform: 'translate(-50%, 50%)' }}>
-                <img src={chainlink} className="connection" alt="link" height={50} />
-              </a>}
-
-              <div class="card-body">
-                <h4 class="fg-item-title d-flex justify-content-evenly mt-4">Archery 2009</h4>
-                <div className='d-flex justify-content-center mb-5 mt-4'>
-                  <button type="button" className="btn btn-primary button">Description</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div className='col-lg-3  col-md-5 mb-5' onMouseEnter={() => setSix(true)}
-            onMouseLeave={() => setSix(false)}>
-            <div class="card">
-              <img src={aero3} className="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
-              {six && <a href='https://photos.google.com/share/AF1QipP41E2-kF_-vbAOnMoOHB6U-WZq6-ZuneMGQkwE6mZt8r3Kw3eaquVNDpDzsblfVA/photo/AF1QipPyPTIHuyVwrod_G2krTaoMpHQv7_ZtCyUdJXnr?key=a2ZpX3ZIQ3MzZ1U5eDNFZ21RNURYMVJXNEllOG13' style={{ position: 'absolute', bottom: '69%', left: '41%', transform: 'translate(-50%, 50%)' }}>
-                <img src={chainlink} className="connection" alt="link" height={50} />
-              </a>}
-
-              <div class="card-body">
-                <h4 class="fg-item-title d-flex justify-content-evenly mt-4">Archery 2008</h4>
-                <div className='d-flex justify-content-center mb-5 mt-4'>
-                  <button type="button" className="btn btn-primary button">Description</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
+  <div className='row d-flex justify-content-evenly mx-3'>
+    {/* First Card */}
+    <div className='card-cont col-lg-3 col-md-5 mb-5'>
+      <div class="card cards">
+        <img src={Bhaag_milka} class="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
+        <div class="card-body">
+          <h4 class="fg-item-title d-flex justify-content-evenly mt-4">National sports 2017</h4>
+          <p className="card-description mt-3 w-100 p-3" style={{ fontSize: '14px', color: '#555', lineHeight: '1.5' }}>
+            This is a detailed description of the gallery item. The image depicts an annual sports event that took place in 2017, showcasing various athletic performances and activities. The event highlighted national level sports, promoting fitness and athleticism across different age groups. 
+          </p>
         </div>
+      </div>
+    </div>
+
+    {/* Second Card */}
+    <div className='col-lg-3 col-md-5 mb-5'>
+      <div class="card cards">
+        <img src={aero} class="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
+        <div class="card-body">
+          <h4 class="fg-item-title d-flex justify-content-evenly mt-4">National Archery 2013</h4>
+          <p className="card-description mt-3 w-100 p-3" style={{ fontSize: '14px', color: '#555', lineHeight: '1.5' }}>
+            This event focused on the national archery championships of 2013. Archers from across the country competed for top honors, demonstrating their precision, skill, and concentration. It was a significant event in the world of archery, showcasing the best of talent.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Third Card */}
+    <div className='col-lg-3 col-md-5 mb-5'>
+      <div class="card cards">
+        <img src={dancing} class="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
+        <div class="card-body">
+          <h4 class="fg-item-title d-flex justify-content-evenly mt-4">Annual Sports 2011</h4>
+          <p className="card-description mt-3 w-100 p-3" style={{ fontSize: '14px', color: '#555', lineHeight: '1.5' }}>
+            This annual event in 2011 brought together the best dancers to showcase their talent in various categories. The performances were judged based on creativity, execution, and expression. It remains a significant event for dancers to compete at a national level.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className='row d-flex justify-content-evenly mx-3'>
+    {/* Fourth Card */}
+    <div className='col-lg-3 col-md-5 mb-5'>
+      <div class="card">
+        <img src={Bhaag_milka2} class="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
+        <div class="card-body">
+          <h4 class="fg-item-title d-flex justify-content-evenly mt-4">Annual Sports 2010</h4>
+          <p className="card-description mt-3 w-100 p-3" style={{ fontSize: '14px', color: '#555', lineHeight: '1.5' }}>
+            The 2010 Annual Sports event highlighted various sporting activities with participants from around the country. This event is notable for its inclusiveness and community involvement, allowing sports enthusiasts to engage in healthy competition.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Fifth Card */}
+    <div className='col-lg-3 col-md-5 mb-5'>
+      <div class="card">
+        <img src={aero2} className="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
+        <div class="card-body">
+          <h4 class="fg-item-title d-flex justify-content-evenly mt-4">Archery 2009</h4>
+          <p className="card-description mt-3 w-100 p-3" style={{ fontSize: '14px', color: '#555', lineHeight: '1.5' }}>
+            The 2009 Archery event was one of the most competitive competitions, with athletes from different regions competing for the top spot. The event focused on precision and technique, making it a crucial tournament in the archery calendar.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Sixth Card */}
+    <div className='col-lg-3  col-md-5 mb-5'>
+      <div class="card">
+        <img src={aero3} className="img-top-2 img-fluid" alt="3-D Mapping Shown Video" style={{ height: '310px', width: '500px' }} />
+        <div class="card-body">
+          <h4 class="fg-item-title d-flex justify-content-evenly mt-4">Sports World Championship 2005</h4>
+          <p className="card-description mt-3 w-100 p-3" style={{ fontSize: '14px', color: '#555', lineHeight: '1.5' }}>
+            The 2005 Sports World Championship was a milestone in the world of athletics, with top athletes from various countries competing in a wide range of events. It was celebrated for its international participation and remarkable performances across different sports.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
       </Container>
     </>
   )

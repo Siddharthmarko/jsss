@@ -5,8 +5,9 @@ import Header2 from "../Layout/Header2";
 import Footer from "../Layout/Footer";
 import Header from "../Layout/Header";
 import Copy from "../Layout/Copy";
-import img2 from "../all imgs/home/founder1.jpg";
-import img3 from "../all imgs/home/manager.jpg";
+
+const img2 = "https://via.placeholder.com/600x400?text=Founder+Image";  // Placeholder for Founder Image
+const img3 = "https://via.placeholder.com/600x400?text=Manager+Image";  // Placeholder for Manager Image
 
 const FounderManager = () => {
   return (
@@ -29,9 +30,10 @@ const FounderManager = () => {
               id="ipad"
             >
               <div className="" style={{}}>
+                {/* Founder Image */}
                 <img
                   src={img2}
-                  alt=" Miss Amelia Atkinson"
+                  alt="Miss Amelia Atkinson"
                   className="founder img-fluid my-2 mt-4"
                   id="img"
                 />
@@ -100,6 +102,7 @@ const FounderManager = () => {
               id="you"
             >
               <div className="card " id="card1">
+                {/* Video of Founder's Journey */}
                 <iframe
                   src="https://www.youtube.com/embed/wcfGnOrWkN0?si=tQ5cyCgGiCxf37DR"
                   title="YouTube video player"
@@ -120,6 +123,7 @@ const FounderManager = () => {
               id="you1"
             >
               <div className="card" id="card1">
+                {/* Video of Founder's Journey */}
                 <iframe
                   src="https://www.youtube.com/embed/wcfGnOrWkN0?si=tQ5cyCgGiCxf37DR"
                   title="YouTube video player"
@@ -139,7 +143,12 @@ const FounderManager = () => {
 
           <div className="row mb-5">
             <div className="col-lg-6 col-md-12 p-5 d-flex flex-column justify-content-center align-items-center">
-              <img src={img3} alt="director" className="dirimg img-fluid " />
+              {/* Manager Image */}
+              <img
+                src={img3}
+                alt="Director"
+                className="dirimg img-fluid"
+              />
             </div>
             <div
               className="col-lg-6 col-md-12 d-flex flex-column justify-content-center"
@@ -165,6 +174,7 @@ const FounderManager = () => {
 };
 
 export default FounderManager;
+
 const StyledDiv = styled.div`
   * {
     margin: 0;
