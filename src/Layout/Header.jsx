@@ -345,12 +345,12 @@ export default function Header() {
 
               
                 <li className="nav-item mx-2">
-                  <a
-                    href="/contact-us"
+                  <Link
+                    to="/contact-us"
                     className="nav-link text-light "
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
